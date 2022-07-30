@@ -4,11 +4,13 @@ const MoviesListCard = ({movie}) => {
     return (
 
         <div>
-            <div>
-                <h2>{title}</h2>
-                <h3>{overview}</h3>
+
+            <div className={movie}>
+                <h2>All fresh movies{title}</h2>
+                <h3>hrt{overview}</h3>
 
             </div>
+
         </div>
     );
 };

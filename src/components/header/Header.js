@@ -9,8 +9,11 @@ const Header = () => {
 
 
     return (<div className={css.Header}>
-            <h2>Movieee</h2>
+            
+<div>
+    <h2>Movieee</h2>
 
+</div>
 <div>
     <NavLink to ={'serials'}>Serials</NavLink>
     <NavLink to ={'films'}>Films</NavLink>

@@ -1,9 +1,8 @@
-import {axiosService} from "./axios.service";
-import {baseURL, urls} from "../constants";
+import axiosService from "./axios.service";
+import {urls} from "../constants";
 
 const movieService = {
-    getMovies:() => axiosService.get(urls.movies),
-    getById:(id, data) => axiosService.get(`${urls.movie}/${id}`)
+    getAll:() => axiosService.get(urls.movies),
+
 }
 export {movieService}
-

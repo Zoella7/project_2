@@ -8,7 +8,8 @@ import {MoviesList} from "./components"
 function App() {
 
   return (<div>
-<MainLayout/>
+{/*<MainLayout/>*/}
+          <MoviesList/>
 
       </div>
 

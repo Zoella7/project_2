@@ -7,8 +7,8 @@ const initialState= {
     errors: null
 
 }
-const getAll =  createAsyncThunk(
-    'movieSlice/getAll',
+const getMovies =  createAsyncThunk(
+    'movieSlice/getMovies',
     async (_, {rejectWithValue})=>{
         try{
             const {data} = await movieService.getAll()
@@ -28,11 +28,11 @@ const movieSlice = createSlice({
     reducers:{},
     extraReducers:(builder) =>
         builder
-            .addCase(getAll.fulfilled, (state, action) => {
+            .addCase(getMovies.fulfilled, (state, action) => {
                 state.errors = null
                 state.movies = action.payload
             })
-            .addCase(getAll.rejected, (state, action) => {
+            .addCase(getMovies.rejected, (state, action) => {
                 state.errors  = action.payload
             })
 
@@ -41,6 +41,6 @@ const movieSlice = createSlice({
 const {reducers:movieReducer} = movieSlice;
 
 
-const movieActions={getAll}
+const movieActions={getMovies}
 
 export {movieReducer, movieActions}

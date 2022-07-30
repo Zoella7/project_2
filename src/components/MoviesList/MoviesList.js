@@ -12,7 +12,7 @@ const MoviesList = () => {
     const dispatch = useDispatch()
 
     useEffect(()=>{
-        dispatch(movieActions.getAll())
+        dispatch(movieActions.getMovies())
 
     },[])
     return (

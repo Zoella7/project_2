@@ -3,16 +3,18 @@ import css from './Header.module.css'
 import {Link} from "react-router-dom"
 import {useDispatch} from "react-redux";
 
+// import pic from "../../assets/logo.png";
 
 const Header = () => {
 
 const dispatch= useDispatch();
     return (
         <div className={css.Header}>
-            
-<div>
 
+<div className={css.logoBox}>
+    {/*<img className={css.logo} src={pic}/>*/}
     <h2>Movieee</h2>
+
 </div>
             <form>
                 <input className={css.form} type="search" placeholder="Search..."/>

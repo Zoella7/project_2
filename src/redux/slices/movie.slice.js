@@ -23,7 +23,7 @@ const getAll =  createAsyncThunk(
 
 const getById =  createAsyncThunk(
     'movieSlice/getById',
-    async (_, {rejectWithValue})=>{
+    async (id, {rejectWithValue})=>{
         try{
             const {data} = await movieService.getById(id)
             return data;
@@ -46,8 +46,17 @@ const movieSlice = createSlice({
                 state.errors = null
                 state.movies = action.payload
             })
-            .addCase(getAll.rejected, (state, action) => {
-                state.errors  = action.payload
+
+            .addCase(getById.fulfilled,(state, action)=>{
+                const curentMovie= state.movies.find(value=> value.id === action.payload.id)
+            })
+            .addDefaultCase((state, action) => {
+                const [type] = action.type.split('/').splice(-1);
+                if([type] === 'rejected'){
+                    state.errors  = action.payload
+                }else{
+                    state.errors=null
+                }
             })
 
 });

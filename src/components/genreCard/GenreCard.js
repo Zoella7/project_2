@@ -1,6 +1,5 @@
-import {Outlet} from "react-router-dom";
 
-const Genre = ({genre}) => {
+const GenreCard = ({genre}) => {
 
    const {id,name} = genre;
     return (
@@ -8,9 +7,9 @@ const Genre = ({genre}) => {
 
 <div>ID:{id}</div>
 <div>Name:{name}</div>
-            <Outlet/>
+
         </div>
     );
 };
 
-export {Genre};
+export {GenreCard};

@@ -6,6 +6,7 @@
     color: dimgray;
     font-size: 25px;
     padding: 15px;
+    border-radius: 2%;
 
 }
 
@@ -15,11 +16,24 @@
     color: black;
     padding: 25px;
 }
-.Header a[class='active']{
-    color: antiquewhite;
-}
+
 h2{
     text-align: left;
     padding-left: 20px;
 }
+
+.form{
+    width: 400px;
+    height: 30px;
+    background: #2b303b;
+    border: none;
+    font-size: 10pt;
+    float: left;
+    color: #ddd9d9;
+    padding-left: 45px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
 

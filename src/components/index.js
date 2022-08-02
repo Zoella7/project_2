@@ -1,3 +1,5 @@
 export * from "./header/Header";
-export * from "./MoviesListCard/MoviesListCard";
-export * from "./MoviesList/MoviesList";
+export * from "./movieCard/MoviesCard";
+export * from "./moviesList/MoviesList";
+export * from "./movieInfo/MovieInfo"
+export * from "./genresList/GenresList"

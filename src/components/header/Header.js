@@ -1,24 +1,27 @@
 import css from './Header.module.css'
 
-import {NavLink} from "react-router-dom"
-
-
+import {Link} from "react-router-dom"
+import {useDispatch} from "react-redux";
 
 
 const Header = () => {
 
-
-    return (<div className={css.Header}>
+const dispatch= useDispatch();
+    return (
+        <div className={css.Header}>
             
 <div>
-    <h2>Movieee</h2>
 
+    <h2>Movieee</h2>
 </div>
+            <form>
+                <input className={css.form} type="search" placeholder="Search..."/>
+                <button onClick={()=>dispatch()
+                }>Submit</button>
+            </form>
 <div>
-    <NavLink to ={'serials'}>Serials</NavLink>
-    <NavLink to ={'films'}>Films</NavLink>
-    <NavLink to ={'cartoons'}>Cartoons</NavLink>
-</div>
+    <Link to ={'genres'}>Find your Genre</Link>
+   </div>
 
         </div>
 

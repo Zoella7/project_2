@@ -1,0 +1,7 @@
+export * from "./genresPage/GanresPage"
+export * from "./genrePage/GenrePage"
+export * from "./movieforGenrePage/MovieforGenrePage"
+export * from "./movieCardPage/MovieCardPage"
+export * from "./moviesListPage/MoviesListPage"
+export * from "./movieInfoPage/MovieInfoPage"
+export * from "./notfoundPage/NotFoundPage"

@@ -21,6 +21,20 @@ const getAll =  createAsyncThunk(
     }
 )
 
+const getById =  createAsyncThunk(
+    'movieSlice/getById',
+    async (_, {rejectWithValue})=>{
+        try{
+            const {data} = await movieService.getById(id)
+            return data;
+        }catch (e){
+            return rejectWithValue(e.response.data)
+
+        }
+
+    }
+)
+
 
 const movieSlice = createSlice({
     name:'movieSlice',
@@ -38,10 +52,10 @@ const movieSlice = createSlice({
 
 });
 
-const {reducers:movieReducer} = movieSlice;
+const {reducer:movieReducer} = movieSlice;
 
 
-export const movieActions={getAll}
+const movieActions={getAll,getById}
 
 
-export default movieSlice.reducer
+export {movieReducer, movieActions}

@@ -1,47 +1,81 @@
-.Header{
+.Header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: darkgray;
+    background-color: #2b303b;
     color: dimgray;
     font-size: 25px;
     padding: 15px;
     border-radius: 2%;
+    margin-bottom: 30px;
 
 }
 
-.Header a{
+.Header a {
     text-decoration: none;
     font-size: 30px;
-    color: black;
+    color: dimgray;
     padding: 25px;
+    font-family: "Baskerville Old Face";
+
 }
 
-h2{
+h2 {
     text-align: left;
     padding-left: 20px;
 }
 
-.form{
+.form {
     width: 400px;
     height: 30px;
     background: #2b303b;
-    border: none;
+    border: 1px solid black;
+
     font-size: 10pt;
     float: left;
-    color: #ddd9d9;
     padding-left: 45px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
 }
-.logo{
+
+.logo {
     width: 100px;
     height: 100px;
     background: none;
+    border-radius: 50%;
 }
-.logoBox{
+
+.logoBox {
     display: flex;
 }
+
+.userlogo {
+    width: 25px;
+    height: 25px;
+    background: none;
+    border-radius: 50%;
+}
+
+.userBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+p {
+    font-size: 20px;
+}
+
+.btn {
+margin-left: 15px;
+    height: 30px;
+    width: 100px;
+    background: dimgray;
+    border: none;
+    border-radius: 5%;
+}
+
+
 
 

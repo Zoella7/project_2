@@ -48,7 +48,8 @@ const movieSlice = createSlice({
             })
 
             .addCase(getById.fulfilled,(state, action)=>{
-                const curentMovie= state.movies.find(value=> value.id === action.payload.id)
+
+                 // const currentMovie = state.movies.find(movie=> movie.id === action.payload)
             })
             .addDefaultCase((state, action) => {
                 const [type] = action.type.split('/').splice(-1);

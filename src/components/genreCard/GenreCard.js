@@ -2,11 +2,12 @@
 const GenreCard = ({genre}) => {
 
    const {id,name} = genre;
+
     return (
         <div>
 
-<div>ID:{id}</div>
-<div>Name:{name}</div>
+<p>ID:{id}</p>
+<h2>Name:{name}</h2>
 
         </div>
     );

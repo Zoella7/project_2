@@ -1,11 +1,15 @@
 import {GenresList} from "../../components";
+import {Outlet} from "react-router-dom";
+
 
 const GenresListPage = () => {
 
 
     return (
         <div>
-<GenresList/>
+
+            <GenresList/>
+            <Outlet/>
 
         </div>);
 };

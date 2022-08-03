@@ -11,7 +11,7 @@ export default function App() {
             <Route path={''} element={<MainLayout/>}>
                 <Route index element={<Navigate to={'movie'}/>}/>
                 <Route path={'movie'} element={<MoviesListPage/>}/>
-                <Route path={'movie/:id'} element={<MovieInfoPage/>}/>
+                <Route path={'movie/information'} element={<MovieInfoPage/>}/>
 
 
                 <Route path={'genres'} element={<GenresListPage/>}>

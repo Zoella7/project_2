@@ -9,10 +9,11 @@ import {GenreCard} from "../genreCard/GenreCard";
 
 const GenresList = () => {
 
-    const {genres} = useSelector(state => state.genres)
+    const {allGenres} = useSelector(state => state.genres)
 
     const dispatch = useDispatch()
-    const {results}= genres
+    const {genres} = allGenres
+
     useEffect(()=>{
         dispatch(genreActions.getAllGenres())
 
@@ -22,7 +23,7 @@ const GenresList = () => {
 
         <div>
 
-            {results && results.map(genre =><GenreCard key={genre.id} genre={genre}/>)}
+            {genres && genres.map(genre =><GenreCard key={genre.id} genre={genre}/>)}
         </div>
 
 

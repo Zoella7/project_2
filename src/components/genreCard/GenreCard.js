@@ -1,16 +1,19 @@
+import css from "./GenreCard.module.css"
+import {useNavigate} from "react-router-dom";
 
-const GenreCard = ({genre}) => {
 
-   const {id,name} = genre;
+
+
+
+const GenreCard = ({filter,genre}) => {
+const navigate = useNavigate()
+   const {name} = genre;
 
     return (
-        <div>
 
-<p>ID:{id}</p>
-<h2>Name:{name}</h2>
+<button className={css.button} onClick={()=>filter(genre.id)}>{name}</button>
 
-        </div>
-    );
-};
+    // <button className={css.button} onClick={()=>navigate('details',{state:genre})}>{name}</button>
+    )};
 
 export {GenreCard};

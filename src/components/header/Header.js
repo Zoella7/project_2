@@ -13,7 +13,7 @@ const dispatch= useDispatch();
 
 <div className={css.logoBox}>
     <img className={css.logo} src={pic}/>
-    <h2>Movieee</h2>
+    <Link to={'/'}>Movieee</Link>
 
 </div>
             <form>

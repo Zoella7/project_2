@@ -2,7 +2,7 @@ import axiosService from "./axios.service";
 import {urls} from "../constants";
 
 const movieService = {
-    getAll:() => axiosService.get(urls.movies),
+    getAll:(page=1) => axiosService.get(urls.movies,{params:{page}}),
     // getById:(id)=> axiosService.get(`${urls.movies}/${id}`),
 
 }

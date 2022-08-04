@@ -1,0 +1,15 @@
+.mainWrap {
+    display: flex;
+}
+
+.button {
+    justify-content: space-between;
+    align-items: center;
+    width: 5%;
+    height: 35px;
+    margin-left: 2px;
+    background: none;
+    border-style: none none groove none;
+    font-style: oblique;
+    font-size: 10px;
+}

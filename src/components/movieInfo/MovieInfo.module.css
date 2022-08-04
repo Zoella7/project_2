@@ -1,9 +1,38 @@
-.poster{
-    width: 50px;
-    height: 50px;
-
+.picture {
+    width: 40%;
+    height: 600px;
 }
 
-.mainBlock{
+.wrap {
+    width: 100%;
+}
+
+.title {
+    color: dimgray;
+    font-size: 30px;
+}
+
+.mainBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.infoBox {
+    width: 45%;
+    margin-left: 20px;
+}
+
+h2 {
+    color: silver;
+}
+
+.btn{
+    margin: 15px;
+    height: 50px;
     width: 200px;
+    background: dimgray;
+    border: none;
+    border-radius: 5%;
+font-family: "Century Gothic";
 }

@@ -1,11 +1,12 @@
 import css from "./MovieCard.module.css";
+
 import {urls} from "../../constants";
 
 import {useNavigate} from "react-router-dom";
 
 
 const MoviesCard = ({movie}) => {
-    const {title,poster_path,vote_average} = movie;
+    const {title, poster_path, vote_average} = movie;
 
 
     const navigate = useNavigate()

@@ -27,26 +27,26 @@ const MoviesList = () => {
 
     const prevPage = () => {
         const page = +query.get('page') - 1;
-            setQuery({page:`${page}`})
+        setQuery({page: `${page}`})
     }
 
     const nextPage = () => {
         const page = +query.get('page') + 1;
-        setQuery({page:`${page}`})
+        setQuery({page: `${page}`})
     }
 
     return (<div>
 
-        <div className={css.wrapBox}>
+            <div className={css.wrapBox}>
 
-            {results && results.map(movie => <MoviesCard key={movie.id} movie={movie}/>)}
+                {results && results.map(movie => <MoviesCard key={movie.id} movie={movie}/>)}
 
 
-        </div>
+            </div>
             <hr/>
             <div className={css.btnWrap}>
-            <button className={css.btn} disabled={prev} onClick={prevPage}>Previous</button>
-            <button className={css.btn} disabled={next} onClick={nextPage}>Next</button>
+                <button className={css.btn} disabled={prev} onClick={prevPage}>Previous</button>
+                <button className={css.btn} disabled={next} onClick={nextPage}>Next</button>
             </div>
         </div>
 

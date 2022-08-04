@@ -2,29 +2,28 @@ import {useEffect} from "react";
 import {movieActions} from "../../redux";
 import {useDispatch, useSelector} from "react-redux";
 import {useLocation} from "react-router-dom";
-import SingeGenre from "../SingeGenre";
+import {MoviesCard} from "../movieCard";
 
+import css from "./GenreInfo.module.css"
 
 const GenreInfo = () => {
 
-    const {movies} = useSelector(state => state.movies)
+    const {moviesByGenre} = useSelector(state => state.movies)
+    const {results} = moviesByGenre
 
     const dispatch = useDispatch()
 
     const {state} = useLocation()
-// console.log(state);
-    const {results} = movies
+
     useEffect(() => {
-        dispatch(movieActions.getAll())
+        dispatch(movieActions.getById({id: state}))
 
-    }, [])
-
-
-    return (<div>
+    }, [state])
 
 
+    return (<div className={css.wraper}>
 
-        {results && results.map(movie => <SingeGenre key={movie.id} movie={movie}/>)}
+            {results && results.map(movie => <MoviesCard key={movie.id} movie={movie}/>)}
 
         </div>
     );

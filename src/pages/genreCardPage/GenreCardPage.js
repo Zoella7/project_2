@@ -5,8 +5,8 @@ import {Outlet} from "react-router-dom";
 const GenreCardPage = () => {
     return (
         <div>
-<GenreCard/>
-<Outlet/>
+            <GenreCard/>
+            <Outlet/>
 
         </div>
     );

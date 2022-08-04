@@ -5,8 +5,8 @@ const urls = {
     movies: `discover/movie?api_key=${api_key}&page=1`,
     image: `https://image.tmdb.org/t/p/original`,
     genres: `genre/movie/list?api_key=${api_key}`,
-    genreById:`genre/movie/api_key=${api_key}&with_genres`,
-    }
+    genreByID: `discover/movie?api_key=${api_key}&with_genres=`
+}
 
 export {
     baseURL,

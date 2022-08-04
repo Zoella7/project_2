@@ -15,13 +15,13 @@ export default function App() {
 
 
                 <Route path={'genres'} element={<GenresListPage/>}>
-                <Route path={'details'} element={<GenreInfoPage/>}/>
+                    <Route path={'details'} element={<GenreInfoPage/>}/>
+                </Route>
             </Route>
-        </Route>
 
-    <Route path={'*'} element={<NotFoundPage/>}/>
-</Routes>
-);
+            <Route path={'*'} element={<NotFoundPage/>}/>
+        </Routes>
+    );
 
 }
 

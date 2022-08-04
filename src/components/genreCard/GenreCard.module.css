@@ -7,9 +7,27 @@
     align-items: center;
     width: 5%;
     height: 35px;
-    margin-left: 2px;
+    margin-left:4px;
     background: none;
-    border-style: none none groove none;
     font-style: oblique;
-    font-size: 10px;
+    font-size: 12px;
+    border: 1px solid black;
+
+
+}
+
+.button:focus {
+    width: 70px;
+    height: 64px;
+    color: snow;
+}
+
+.button {
+    width: 65px;
+    height: 50px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid dimgray;
+    outline: none;
+    transition: 1s ease-in-out;
 }

@@ -5,6 +5,8 @@ import {Rating} from 'react-simple-star-rating'
 import {useState} from "react";
 
 const MovieInfo = () => {
+
+
     const [rating, setRating] = useState(0)
     const handleRating = (rate) => {
         setRating(rate)

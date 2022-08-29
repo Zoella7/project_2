@@ -13,6 +13,7 @@
     border: none;
     border-radius: 5%;
     justify-content: center;
+    cursor: pointer;
 }
 .btnWrap{
     margin-left: 500px;

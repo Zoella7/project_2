@@ -22,7 +22,7 @@ const MoviesList = () => {
     useEffect(() => {
         dispatch(movieActions.getAll({page: query.get('page')}))
 
-    }, [query])
+    }, [dispatch,query])
 
 
     const prevPage = () => {
@@ -45,8 +45,8 @@ const MoviesList = () => {
             </div>
             <hr/>
             <div className={css.btnWrap}>
-                <button className={css.btn} disabled={prev} onClick={prevPage}>Previous</button>
-                <button className={css.btn} disabled={next} onClick={nextPage}>Next</button>
+                <button className={css.btn} disabled={!prev} onClick={prevPage}>Previous</button>
+                <button className={css.btn} disabled={!next} onClick={nextPage}>Next</button>
             </div>
         </div>
 

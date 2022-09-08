@@ -12,7 +12,7 @@ const MoviesCard = ({movie}) => {
     const navigate = useNavigate()
     return (
 
-        <div className={css.Mainwrap}>
+        <div className={css.MainWrap}>
             <img className={css.picture} src={urls.image + poster_path} alt=""/>
 
             <div>

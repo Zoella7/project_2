@@ -22,16 +22,16 @@ const MoviesList = () => {
     useEffect(() => {
         dispatch(movieActions.getAll({page: query.get('page')}))
 
-    }, [dispatch,query])
+    }, [query])
 
 
     const prevPage = () => {
-        const page = +query.get('page') - 1;
+        const page = +query.get('page') -1;
         setQuery({page: `${page}`})
     }
 
     const nextPage = () => {
-        const page = +query.get('page') + 1;
+        const page = +query.get('page') +1;
         setQuery({page: `${page}`})
     }
 
@@ -40,7 +40,6 @@ const MoviesList = () => {
             <div className={css.wrapBox}>
 
                 {results && results.map(movie => <MoviesCard key={movie.id} movie={movie}/>)}
-
 
             </div>
             <hr/>

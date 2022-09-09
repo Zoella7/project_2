@@ -14,7 +14,7 @@ const Header = () => {
 
             <div className={css.logoBox}>
                 <img className={css.logo} src={pic}/>
-                <Link to={'/'}>Movieee</Link>
+                <h2><Link to={'/'}>Movieee</Link></h2>
 
             </div>
             <form>

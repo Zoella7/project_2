@@ -1,14 +1,27 @@
 import css from './Header.module.css'
 
-import {Link} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
 import {useDispatch} from "react-redux";
 
 import pic from "../../assets/logo.png";
 import pic2 from "../../assets/userlogo.png";
+import {useForm} from "react-hook-form";
+import {movieActions} from "../../redux";
 
 const Header = () => {
-
+    const navigate = useNavigate()
     const dispatch = useDispatch();
+
+    const {register, handleSubmit, reset} = useForm()
+
+
+    const submit = (obj) => {
+        dispatch(movieActions.search({obj: obj.search}))
+        reset();
+        navigate('search')
+    }
+
+
     return (
         <div className={css.Header}>
 
@@ -17,11 +30,8 @@ const Header = () => {
                 <h2><Link to={'/'}>Movieee</Link></h2>
 
             </div>
-            <form>
-                <input className={css.form} type="search" placeholder="Search..."/>
-                <button className={css.btn} onClick={() => dispatch()
-                }>Search
-                </button>
+            <form onSubmit={handleSubmit(submit)}>
+                <input className={css.form} type="search" placeholder="Search..." {...register('search')}/>
             </form>
 
 

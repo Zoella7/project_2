@@ -79,11 +79,13 @@ p {
 .btn {
 margin-left: 15px;
     height: 30px;
-    width: 100px;
+    width: 120px;
     background: dimgray;
     border: none;
-    border-radius: 5%;
+    border-radius: 5px;
     cursor: pointer;
+    color: silver;
+    font-size: 15px;
 }
 
 

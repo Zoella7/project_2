@@ -2,6 +2,7 @@ import css from "./GenreCard.module.css"
 import {useNavigate} from "react-router-dom";
 
 
+
 const GenreCard = ({genre}) => {
     const navigate = useNavigate()
 

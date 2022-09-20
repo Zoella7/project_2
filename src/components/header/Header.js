@@ -35,8 +35,8 @@ const Header = () => {
             </form>
 
 
-            <Link to={'genres'}>Find your Genre</Link>
-
+            {/*<button className={css.btn}><Link to={'genres'}>Sort by genre</Link></button>*/}
+<button className={css.btn} onClick={()=>navigate('genres')}>Sort by genre</button>
             <div className={css.userBox}>
                 <img className={css.userlogo} src={pic2}/>
                 <p>Log in</p>
